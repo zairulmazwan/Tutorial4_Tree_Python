@@ -34,35 +34,17 @@ class Binary_Tree:
 
     # Root -> Left -> Right
     def travers_preorder(self, node):
-        if node != None:
-            self.visit(node.value)
-            self.travers_preorder(node.left)
-            self.travers_preorder(node.right)
+        pass #Write your code here.
 
 
     # Left -> Right -> Root
     def travers_postorder(self, node):
-        if node != None:
-            self.travers_postorder(node.left)
-            self.travers_postorder(node.right)
-            self.visit(node.value)
+        pass  # Write your code here.
 
 
     # Visit all not at the same level from left to right
     def travers_levelorder(self, node):
-        if node != None:
-            Q = []
-            Q.append(node)
-
-            while len(Q) != 0:
-                n = Q.pop(0)
-                self.visit(n.value)
-
-                if n.left != None:
-                    Q.append(n.left)
-
-                if n.right != None:
-                    Q.append(n.right)
+        pass #Write your code here.
 
 
     def search_node(self, current_node, value):

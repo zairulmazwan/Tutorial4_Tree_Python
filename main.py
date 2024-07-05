@@ -16,7 +16,7 @@ my_tree.travers_levelorder(my_tree.root)
 
 print("\nContain node? ",my_tree.contain_node(5))
 
-print("\nFind smallest ",my_tree.find_smallest(my_tree.root))
+print("\nFind smallest value in the tree: ",my_tree.find_smallest(my_tree.root))
 
 print("\nDelete a node ")
 my_tree.delete_recursion(my_tree.root,13)
