@@ -64,7 +64,7 @@ class Binary_Tree:
         res = root.value if root.left == None else self.find_smallest(root.left)
         return res
 
-    def delete_recursion(self, current_node, value):
+    def delete_recursive(self, current_node, value):
         if current_node == None:
             return None
 
@@ -80,19 +80,19 @@ class Binary_Tree:
 
             smallest_value = self.find_smallest(current_node.right)
             current_node.value = smallest_value
-            current_node.right = self.delete_recursion(current_node.right, smallest_value)
+            current_node.right = self.delete_recursive(current_node.right, smallest_value)
             return current_node
 
         if value < current_node.value:
-            current_node.left = self.delete_recursion(current_node.left, value)
+            current_node.left = self.delete_recursive(current_node.left, value)
             return current_node
 
-        current_node.right = self.delete_recursion(current_node.right, value)
+        current_node.right = self.delete_recursive(current_node.right, value)
         return current_node
 
 
     def delete_node(self, value):
-        self.root = self.delete_recursion(self, self.root, value)
+        self.root = self.delete_recursive(self.root, value)
 
     def visit(self, value):
         print(value, end=" ")
